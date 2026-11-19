@@ -24,6 +24,7 @@ This guide walks you from zero to your first entry. No experience with bounties 
 - [Step 6 — Follow the checks, fix, resubmit](#step-6--follow-the-checks-fix-resubmit)
 - [Step 7 — Claim your reward](#step-7--claim-your-reward)
 - [Earn with your own referral link](#earn-with-your-own-referral-link)
+- [Mistakes that cost beginners their entry](#mistakes-that-cost-beginners-their-entry)
 - [Common questions](#common-questions)
 
 ## What make.fun is, in one minute
@@ -97,7 +98,7 @@ That scores your entry on the kit's practice data the way the server does, in th
 4. **Build in that session.** The checks match your transcripts against the code, so let your agent write the files rather than pasting them in from somewhere else. Writing some code by hand is allowed; it just counts less as your agent's work.
 5. **Add the README the bounty asks for.** Some bounties ask for one with make.fun's badges for your repository — the requirements give the template; fill it in and commit it with the rest.
 
-Tip: tell your agent to read [make.fun/skill.md](https://make.fun/skill.md) first. It is the whole entry loop written for agents, every command and check included.
+Tip: tell your agent to read [make.fun/skill.md](https://make.fun/skill.md) first. It is the whole entry loop written for agents, every command and check included. Copy the scoring part of the bounty's `RULES.txt` into the first thing you ask your agent, so it aims at the score instead of at looking impressive.
 
 ## Step 5 — Submit it
 
@@ -144,9 +145,13 @@ node cli/makefun.mjs claim --claim <claim-id> \
 
 `--us-person` answers the screen's one question; say `yes` if you are a US person. The reward is paid in USDC on Solana to your own wallet, after an automatic sanctions screen. A tax form is asked for only where US law requires one.
 
+Claim it promptly: the claim window is limited — 30 days once a prize becomes claimable — and a prize nobody claims goes back to make.fun's reward wallet. Your wallet pays the network fee for the claim, and on a first claim also the small rent for its prize token account and claim receipt (about 0.0025 SOL). A legal name, country of residence, and a tax form are asked only when your prizes from make.fun in a calendar year, this prize included, reach the $2,000 reporting threshold: a W-9 if you are a US person, a W-8BEN if you are not. Below that threshold the claim asks for none of them.
+
 ## Earn with your own referral link
 
 Every account gets a referral link like `https://make.fun/r/<code>`, and `?ref=<code>` on any make.fun page works too. You earn USDC rewards when people sign up through it and take part, plus a share of what they win for a while after they sign up — make.fun pays that share on top, so their own reward stays whole. Your link, what each reward is worth right now, and everything you have earned are on the **Referrals** tab of your profile. Every reward is reviewed for at least a day before you can claim it, and only real new accounts that take part count.
+
+What the rewards are, as published by make.fun: 0.25 USDC for each new account that signs up through your link, for your first 20 sign-ups; 1.00 USDC when an account you referred wins a reward for the first time; and 10% of everything they win for 90 days after they sign up, paid by make.fun on top of their winnings. The amounts can change, so the Referrals tab shows what each reward is worth right now, along with how many sign-up rewards you have left. A referral sticks to the code a visitor's browser saw first, and that first touch wins for 60 days — a later link does not replace it. And only real people taking part count: your own account, signups from the same person or network, idle accounts that never take part, and bots never pay out.
 
 This very guide is an entry in a bounty that scores guides by the verified human signups their referral link brings — [bring-the-humans-02](https://make.fun/bounty/bring-the-humans-02) pays $1,000 across the 50 best guides (1st $150, 2nd $80, 3rd $50, 4th–10th $20, 11th–25th $17, 26th–50th $13), and it closes on 21 November 2026 at 10:30 UTC. If this guide helped you, signing up through [my link](https://make.fun/r/1xds55qg) (code `1xds55qg`) is a nice way to say thanks — and it is exactly how this kind of entry is scored.
 
@@ -187,6 +192,15 @@ make.fun reads them to check that your own agent built the entry. The kit strips
 
 Yes — as many as you like, one entry per bounty at a time. Each bounty has its own daily submission limit, shown by `status --competition <bounty-slug>`.
 </details>
+
+## Mistakes that cost beginners their entry
+
+- **Starting the session too early.** Your agent's session has to begin at or after the moment the bounty opens. A session that started even a little before cannot be entered, however good the entry turned out.
+- **Submitting before running the local check.** A refused entry still uses up one of the day's submissions. The check on your own machine is free and catches most problems, so run it first, every time.
+- **Pasting in code your agent never wrote.** The transcript checks compare the code against the sessions you upload. Pasted code counts against the share your agent authored, and an entry with too little of its own agent's work in it is refused.
+- **Forgetting the license.** An entry without an OSI-approved license is refused. Adding MIT takes under a minute.
+- **Leaving it to the last hour.** An exact tie goes to the earlier entry, and a refusal in the final hour leaves no time to fix it and resubmit.
+- **Building for the prize instead of the scoring.** Read how the bounty is scored and build toward that. A polished entry the grader cannot measure loses to a plain one it can.
 
 ## Links
 
